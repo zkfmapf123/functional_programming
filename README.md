@@ -38,3 +38,17 @@ const plus = (a, b) => a + b
 
 console.log(loop(plus, 0, range(1, 100)))
 ```
+
+### Options vs Try
+
+- Option
+
+```
+  에러난 사실만을 기록할 때
+```
+
+- Try
+
+```
+  에러난 이유를 가지고 오고싶을 때
+```
