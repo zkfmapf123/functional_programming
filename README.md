@@ -52,3 +52,32 @@ console.log(loop(plus, 0, range(1, 100)))
 ```
   에러난 이유를 가지고 오고싶을 때
 ```
+
+### 명령형 vs 선언형
+
+```
+-- use Func 선언형
+export const KeepSuccess =
+  <E, R>(tas: Array<Try<E, R>>): Array<R> => {
+    const ret = tas.flatMap((ta) => {
+      if (isSuccess(ta)) return [ta.result];
+      else return [];
+    })
+    return ret;
+  }
+
+-- use For (명령형)
+export const KeepSuccessWithFor = <E, R>(tas: Array<Try<E, R>>): Array<R> => {
+  const ret: Array<R> = [];
+  for (const ta of tas) {
+    if (isSuccess(ta)) {
+      ret.push(ta.result);
+    }
+  }
+  return ret;
+}
+
+// 함수형 프로그래밍에서는 선언형 프로그래밍을 지향한다.
+// 명령형 코드가 나쁘다는 건 아니다.
+// 선언적인 방식의 코드는 부수효과를 파악하고 격리한다는 점에서 선언적이 형태로 사용한다면 -> 사이드 이펙트를 피할 수 있다.
+```
