@@ -85,6 +85,6 @@ export const KeepSuccessWithFor = <E, R>(tas: Array<Try<E, R>>): Array<R> => {
 
 ### use fp-ts (with await-to-js)
 
-- <a href="https://zanza00.gitbook.io/learn-fp-ts/code-conventions">fp-ts documents</a>
+- <a href="https://gcanti.github.io/fp-ts/">fp-ts documents</a>
 - https://www.npmjs.com/package/fp-ts
 - https://www.npmjs.com/package/await-to-js
