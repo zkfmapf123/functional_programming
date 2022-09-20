@@ -33,7 +33,8 @@ function loop(fn, acc, list) {
   return fn, fn(acc, head), tail
 }
 
-const range = (start, end) => Array.from({ length: end - start + 1 }, (_, index) => index + start)
+const range = (start, end) =>
+  Array.from({length: end - start + 1}, (_, index) => index + start)
 const plus = (a, b) => a + b
 
 console.log(loop(plus, 0, range(1, 100)))
@@ -55,7 +56,7 @@ console.log(loop(plus, 0, range(1, 100)))
 
 ### 명령형 vs 선언형
 
-```
+```ts
 -- use Func 선언형
 export const KeepSuccess =
   <E, R>(tas: Array<Try<E, R>>): Array<R> => {
@@ -81,3 +82,9 @@ export const KeepSuccessWithFor = <E, R>(tas: Array<Try<E, R>>): Array<R> => {
 // 명령형 코드가 나쁘다는 건 아니다.
 // 선언적인 방식의 코드는 부수효과를 파악하고 격리한다는 점에서 선언적이 형태로 사용한다면 -> 사이드 이펙트를 피할 수 있다.
 ```
+
+### use fp-ts (with await-to-js)
+
+- <a href="https://zanza00.gitbook.io/learn-fp-ts/code-conventions">fp-ts documents</a>
+- https://www.npmjs.com/package/fp-ts
+- https://www.npmjs.com/package/await-to-js

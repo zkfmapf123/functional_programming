@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "practice": "nodemon --exec ts-node practice/fp.ts ",
-    "jest": "npx jest --watch"
+    "jest": "npx jest --watch",
+    "fp-ts-pipe": "ts-node ./fp-ts/pipe.ts",
+    "fp-ts-ord": "ts-node ./fp-ts/ord.ts",
+    "fp-ts-option": "ts-node ./fp-ts/option.ts"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,8 @@
   "dependencies": {
     "@types/jest": "^28.1.6",
     "@types/ramda": "^0.28.15",
+    "await-to-js": "^3.0.0",
+    "fp-ts": "^2.12.3",
     "jest": "^28.1.3",
     "ramda": "^0.28.0",
     "rxjs": "^7.5.6",
